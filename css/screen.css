@@ -172,13 +172,19 @@ a:hover {
   display: flow-root;
 }
 
-.o-row--dark {
-  background-color: 10%;
-  color: white;
+.o-row--primary {
+  background-color: hsl(198.0786026201, 100%, 50%);
 }
 
-.o-row--lg {
-  background-color: hsl(198.0786026201, 100%, 40%);
+@media (min-width: 769px) {
+  .o-row--lg {
+    padding: 3rem 3rem 1.5rem;
+  }
+}
+
+.o-row--dark {
+  background-color: hsl(198.0786026201, 10%, 20%);
+  color: white;
 }
 
 /*
