@@ -167,6 +167,20 @@ a:hover {
     ---
     Creates a horizontal row with padding
 */
+.o-row {
+  padding: 1.5rem 1.5rem 0;
+  display: flow-root;
+}
+
+.o-row--dark {
+  background-color: 10%;
+  color: white;
+}
+
+.o-row--lg {
+  background-color: hsl(198.0786026201, 100%, 40%);
+}
+
 /*
     Objects: Container
     ---

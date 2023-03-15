@@ -318,6 +318,17 @@ a:hover {
 */
 
 .o-row {
+  padding: $space-m $space-m 0;
+  display: flow-root;
+}
+
+.o-row--dark {
+  background-color: $color-gray-saturation;
+  color: white;
+}
+
+.o-row--lg {
+  background-color: $color-primary;
 }
 
 /*
