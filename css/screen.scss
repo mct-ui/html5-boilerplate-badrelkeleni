@@ -159,15 +159,19 @@ $breakpoints: (
 *:before,
 *:after {
   // Reset box-sizing
+  box-sizing: border-box;
 }
 
 * {
   // Reset margin and font-size and font-weight
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
 }
 
 img {
-  // make images block level elements
-  // make images responsive
+  display: block; // make images block level elements
+  max-width: 100%; // make images responsive
 }
 
 /*---------------------------------------/*
@@ -181,6 +185,11 @@ img {
 */
 
 html {
+  font-size: calc($root-font-size / 16 * 100%); // = 16px
+  line-height: 1.5; // = 24px
+  font-family: $font-family-primary; // global font-family
+  color: $color-text; // global text color
+  scroll-behavior: smooth; // smooth scrolling
 }
 
 /*
@@ -188,6 +197,8 @@ html {
 */
 
 ::selection {
+  background: $color-primary-light; // background color
+  color: white; // text color
 }
 
 /*
@@ -197,17 +208,33 @@ html {
 */
 
 h1 {
+  font-size: $ms5;
+  font-weight: 700;
+  line-height: calc($baseline * 4);
+  margin-bottom: $space-m;
 }
 
 h2 {
+  font-size: $ms3;
+  font-weight: 700;
+  line-height: calc($baseline * 3);
+  margin-bottom: $space-m;
 }
 
 h3 {
+  font-size: $ms1;
+  font-weight: 700;
+  line-height: calc($baseline * 3);
+  margin-bottom: $space-m;
 }
 
 h4,
 h5,
 h6 {
+  font-size: $ms0;
+  font-weight: 700;
+  line-height: calc($baseline * 3);
+  margin-bottom: $space-m;
 }
 
 p,
@@ -217,23 +244,40 @@ dl,
 table,
 address,
 figure {
+  margin-bottom: $space-m;
 }
 
 ul,
 ol {
+  padding: 0;
+  list-style-position: inside;
 }
 
 li ul,
 li ol {
+  margin-bottom: 0;
 }
 
 blockquote {
+  font-family: $font-family-secondary;
+  font-style: italic;
+  font-size: $ms3;
+  line-height: calc($baseline * 4);
+  margin-bottom: $space-m;
 }
 
 figcaption {
+  font-size: $ms-1;
+  line-height: calc($baseline * 2);
+  margin-top: $space-xs;
+  color: $color-text-lighter;
 }
 
 hr {
+  border: 0;
+  height: 1px;
+  background: $color-border;
+  margin-bottom: $space-m;
 }
 
 a {
